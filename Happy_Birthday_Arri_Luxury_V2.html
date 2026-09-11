@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>✨ Happy Birthday Arri ✨</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden}
+body{font-family:Segoe UI,Arial,sans-serif;background:#07050d;color:#fff}
+#intro,#main{position:fixed;inset:0}
+#intro{display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#34204d,#09070f 65%);z-index:50;transition:1s}
+.introBox{padding:35px 25px}
+.introBox h2{font-size:16px;letter-spacing:6px;opacity:.8;margin-bottom:20px}
+.gift{font-size:100px;cursor:pointer;filter:drop-shadow(0 0 25px rgba(255,210,100,.45));animation:bob 1.7s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-15px) rotate(3deg)}}
+.tap{margin-top:22px;color:#f5d17a;letter-spacing:3px;font-size:13px}
+#main{display:none;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 5%,#39204c,#110b1b 48%,#030308 100%)}
+.stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 10% 20%,#fff,transparent),radial-gradient(1px 1px at 25% 70%,#fff,transparent),radial-gradient(2px 2px at 65% 15%,#fff,transparent),radial-gradient(1px 1px at 80% 80%,#fff,transparent),radial-gradient(2px 2px at 90% 35%,#fff,transparent);background-size:280px 280px;animation:starMove 15s linear infinite}
+@keyframes starMove{to{transform:translateY(-120px)}}
+.card{position:relative;width:min(92%,680px);max-height:92vh;overflow:auto;padding:38px 30px;text-align:center;border:1px solid rgba(255,215,130,.4);border-radius:32px;background:rgba(255,255,255,.075);backdrop-filter:blur(18px);box-shadow:0 0 60px rgba(255,190,80,.13);z-index:5;animation:appear 1.2s ease}
+@keyframes appear{from{opacity:0;transform:scale(.8) translateY(30px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.crown{font-size:42px;animation:bob 2s infinite}
+.badge{font-size:11px;letter-spacing:5px;text-transform:uppercase;opacity:.7;margin-top:8px}
+h1{font-size:clamp(55px,14vw,100px);line-height:1;margin:13px 0;background:linear-gradient(90deg,#fff3bd,#ffd45f,#fff8dc);-webkit-background-clip:text;color:transparent;letter-spacing:5px}
+.sub{font-size:20px;color:#f6dca0}
+.line{width:130px;height:2px;margin:19px auto;background:linear-gradient(90deg,transparent,#ffd45f,transparent)}
+.message{font-size:15px;line-height:1.85;color:#eee7f2}
+.gold{color:#ffd45f;font-weight:700}
+.from{margin-top:22px;text-transform:uppercase;letter-spacing:4px;font-size:11px;opacity:.65}
+.but{font-size:25px;color:#ffd45f;font-weight:700;margin-top:5px}
+button{margin-top:18px;border:1px solid #ffd45f;background:rgba(255,212,95,.08);color:#ffe7a3;padding:11px 25px;border-radius:30px;cursor:pointer;font-size:14px;transition:.3s}
+button:hover{background:#ffd45f;color:#100c0b;box-shadow:0 0 30px rgba(255,212,95,.5)}
+.balloon{position:absolute;width:42px;height:52px;border-radius:50%;bottom:-70px;animation:up 9s linear infinite;opacity:.7}
+.balloon:after{content:"";position:absolute;width:1px;height:55px;background:#ddd;left:50%;top:50px}
+.b1{left:7%;background:#ff709f}.b2{left:22%;background:#8c7dff;animation-delay:2s}.b3{right:19%;background:#ffd45f;animation-delay:4s}.b4{right:7%;background:#70d7ff;animation-delay:6s}
+@keyframes up{to{transform:translateY(-120vh) rotate(15deg)}}
+.fire{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffd45f;box-shadow:0 -55px #ffd45f,39px -39px #ff75aa,55px 0 #fff,39px 39px #ffd45f,0 55px #ff75aa,-39px 39px #fff,-55px 0 #ffd45f,-39px -39px #ff75aa;animation:boom 2.2s infinite;z-index:2}
+.f1{left:14%;top:19%}.f2{right:14%;top:28%;animation-delay:.7s}.f3{left:48%;top:10%;animation-delay:1.4s}
+@keyframes boom{0%{transform:scale(.1);opacity:0}25%{opacity:1}100%{transform:scale(1.5);opacity:0}}
+.conf{position:absolute;top:-20px;width:7px;height:13px;animation:fall 4s linear infinite;z-index:10}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+.burst{position:absolute;left:50%;top:50%;width:7px;height:7px;border-radius:50%;background:#ffd45f;pointer-events:none;animation:burst 1.5s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) rotate(360deg);opacity:0}}
+@media(max-width:500px){.card{padding:30px 20px}.message{font-size:14px;line-height:1.7}.crown{font-size:35px}}
+</style>
+</head>
+<body>
+<section id="intro">
+  <div class="introBox">
+    <h2>A SPECIAL SURPRISE</h2>
+    <div class="gift" onclick="enter()">🎁</div>
+    <div class="tap">TAP THE GIFT TO OPEN ✨</div>
+  </div>
+</section>
+
+<section id="main">
+  <div class="stars"></div>
+  <div class="fire f1"></div><div class="fire f2"></div><div class="fire f3"></div>
+  <div class="balloon b1"></div><div class="balloon b2"></div><div class="balloon b3"></div><div class="balloon b4"></div>
+
+  <div class="card">
+    <div class="crown">👑</div>
+    <div class="badge">A Beautiful Day • A Beautiful Soul</div>
+    <h1>ARRI</h1>
+    <div class="sub">✨ HAPPY BIRTHDAY ✨</div>
+    <div class="line"></div>
+
+    <div class="message">
+      On this beautiful day, I pray that <span class="gold">Allah</span>
+      fills your life with happiness, peace, success and countless blessings. 🤲
+      <br><br>
+      May Allah protect you from every difficulty, guide you toward what is best,
+      accept your prayers and make every coming year better than the last.
+      <br><br>
+      May your dreams turn into beautiful realities, your heart remain peaceful,
+      and your smile never lose its brightness. ✨
+      <br><br>
+      <span class="gold">May Allah bless you with a long, happy, successful and beautiful life. Ameen. 🤍</span>
+    </div>
+
+    <div class="line"></div>
+    <div class="from">With Love & Best Wishes</div>
+    <div class="but">Butt ❤️</div>
+    <button onclick="celebrate()">🎉 Celebrate Again</button>
+  </div>
+</section>
+
+<script>
+function enter(){
+  document.getElementById("intro").style.opacity="0";
+  setTimeout(()=>{
+    document.getElementById("intro").style.display="none";
+    document.getElementById("main").style.display="flex";
+    confetti();
+  },900);
+}
+function confetti(){
+  for(let i=0;i<80;i++){
+    const c=document.createElement("div");
+    c.className="conf";
+    c.style.left=Math.random()*100+"vw";
+    c.style.animationDelay=Math.random()*4+"s";
+    c.style.animationDuration=(3+Math.random()*4)+"s";
+    c.style.background=["#ffd45f","#ff75aa","#8c7dff","#fff","#70d7ff"][Math.floor(Math.random()*5)];
+    document.getElementById("main").appendChild(c);
+  }
+}
+function celebrate(){
+  for(let i=0;i<90;i++){
+    const p=document.createElement("div");
+    p.className="burst";
+    const angle=Math.random()*Math.PI*2;
+    const dist=100+Math.random()*350;
+    p.style.setProperty("--x",Math.cos(angle)*dist+"px");
+    p.style.setProperty("--y",Math.sin(angle)*dist+"px");
+    p.style.background=["#ffd45f","#ff75aa","#8c7dff","#fff"][Math.floor(Math.random()*4)];
+    document.getElementById("main").appendChild(p);
+    setTimeout(()=>p.remove(),1600);
+  }
+}
+</script>
+</body>
+</html>
